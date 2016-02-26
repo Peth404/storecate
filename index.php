@@ -9,11 +9,10 @@
     <title>Stores Cate</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link href="css/product-grid.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <script src="js/bootstrap.min.js"></script>
 </head>
 <body>
+ 
   <!-- NavBar Start -->
     <!-- <div class="container-fluid"> -->
       <nav class="navbar navbar-default" role="navigation">
@@ -49,14 +48,14 @@
   <section>
     <div class="container">
       <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-2">
           <div class="left-sidebar">
             <h2>Stores</h2>
             <div class="panel-group category-products" id="accordian">
              
               <div class="panel panel-default">
                 <div class="panel-heading">
-                  <h4 class="panel-title"><a href="#">Eadgers</a></h4>
+                  <h4 class="panel-title"><a href="#">Edgers</a></h4>
                 </div>
               </div>
               <div class="panel panel-default">
@@ -95,7 +94,7 @@
         <!-- product grid start -->
             
 
-        <div class="col-md-9">
+        <div class="col-md-10">
           <div class="col-lg-12">
             <h2 class="title text-center">Products</h2>
           </div>
@@ -107,9 +106,16 @@
                 <div class="col-lg-3 col-md-4 col-xs-6 thumb">
                   <div class="thumbnail" href="#">
                     <img src="<?php echo $product_array[$key]["image"]; ?>">
-                      <h2><?php echo $product_array[$key]["discount"]."%"; ?></h2>
+                      <h2><?php echo $product_array[$key]["discount"]. "%" . " off"; ?></h2>
+                      <h2><?php echo $product_array[$key]["costprice"]; ?></h2>
                       <p><?php echo $product_array[$key]["name"]; ?></p>
-                      <a href="#" class="btn btn-default"><i class="fa fa-search-plus"></i></i>View</a>
+                      <p><?php echo $product_array[$key]["id"]; ?></p>
+
+                    <!--  <button  id=new_one12 class=my_button1 value="<?php echo $product_array[$key]["image"]; ?>">View</button>
+ -->
+                     <button class="btn btn-primary modelBtn" data-toggle="modal" data-target="#myModal" value="<?php echo $product_array[$key]["image"]; ?>"> <i class="fa fa-search-plus"></i></i>View</button>
+                     
+
                   </div>
                 </div>
                     <?php
@@ -117,10 +123,36 @@
                     }
                   ?>
         </div>
+        <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+            <?php
+              /*$product_array = $db_handle->runQuery("SELECT * FROM item ORDER BY id ASC");*/
+              if (!empty($product_array)) { 
+                foreach($product_array as $key=>$image){
+              ?>
+                <img src="<?php echo $product_array[$key]["image"]; ?>" class="img-responsive">
+            <?php
+          }
+        }
+        ?>
+              <!-- <img src="<?php echo $product_array[$key]["image"]; ?>"> -->
+             <!--  <img src="../images/products/htc-A9.jpg"> -->
+             <!-- <img src="$str"> -->
+            </div>
+        </div>
+      </div>
+
+
+
+    </div>
     </div>
   </div>
 
 
-    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>   
+<script src="js/bootstrap.min.js"></script>
+<script src="js/storecate.js"></script>
 </BODY>
 </HTML>
