@@ -1,22 +1,24 @@
-@import url(https://fonts.googleapis.com/css?family=Josefin+Slab);
-#ed{
-	background-color: #000;
-    color: #FFF;
-    padding-bottom: 16px;
+body{
+    background-color: transparent;
 }
-.elogo{
-    margin-left: 24px;
+#jet{
+    background: #F67C18;
 }
-
+#jlogo{
+    width: 130px;
+    height: 76px;
+    margin-left: 50px;
+}
+#jetthumbProduct{
+    background-color: #000;
+}
 #thumbProduct{
   height: 280px;
 }
+.jetContent{
+    background-color: #FFFFFF;
 
-a.edlinks{
-    font-family: arial;
-    font-weight: 200;
-    
-    }
+}
 
 .productImage
 {
@@ -36,13 +38,6 @@ a.edlinks{
     transition: all 200ms ease-in;
     transform: scale(1.3);   
 
-}
-.storeList{
-    text-align: center;
-}
-.saleTag{
-    text-align: center;
-    
 }
 .productImage:hover
 {

@@ -17,8 +17,8 @@ if (!$con)
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Stores Cate Edgars</title>
-    <link rel="stylesheet" type="text/css" href="ed.css">
+    <title>Stores Cate Jet</title>
+    <link rel="stylesheet" type="text/css" href="jet.css">
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -27,7 +27,7 @@ if (!$con)
  
   <!-- NavBar Start -->
     <!-- <div class="container-fluid"> -->
-      <nav class="navbar navbar-default" id="ed" role="navigation">
+      <nav class="navbar navbar-default" id="jet" role="navigation">
         <div class="container-fluid">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -37,7 +37,7 @@ if (!$con)
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" id="navLinks" href="#"><img class="elogo" src="img/elogo.png"></a>
+            <a class="navbar-brand" id="navLinks" href="#"><img id="jlogo" src="img/jlogo.png"></a>
           </div>
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
@@ -56,47 +56,47 @@ if (!$con)
     <!-- </div> -->
   <!-- NavBar End -->
   <!-- body section start -->
-  <section>
+  <section class="jetContent">
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-2">
           <div class="left-sidebar">
-            <h2 class="storeList">Stores</h2>
+            <h2>Stores</h2>
             <div class="panel-group category-products" id="accordian">
              
               <div class="panel panel-default activeTab">
                 <div class="panel-heading"  id="ed">
-                  <h4 class="panel-title active"><a class="edlinks" href="#">Edgers</a></h4>
+                  <h4 class="panel-title active"><a href="#">Edgers</a></h4>
                 </div>
               </div>
               <div class="panel panel-default activeTab">
                 <div class="panel-heading"  id="ed">
-                  <h4 class="panel-title"><a class="edlinks" href="#">Jet</a></h4>
+                  <h4 class="panel-title"><a href="#">Jet</a></h4>
                 </div>
               </div>
               <div class="panel panel-default activeTab">
                 <div class="panel-heading"  id="ed">
-                  <h4 class="panel-title"><a class="edlinks" href="#">Pep</a></h4>
+                  <h4 class="panel-title"><a href="#">Pep</a></h4>
                 </div>
               </div>
               <div class="panel panel-default activeTab">
                 <div class="panel-heading"  id="ed">
-                  <h4 class="panel-title"><a class="edlinks" href="#">Identity</a></h4>
+                  <h4 class="panel-title"><a href="#">Identity</a></h4>
                 </div>
               </div>
               <div class="panel panel-default activeTab">
                 <div class="panel-heading"  id="ed">
-                  <h4 class="panel-title"><a class="edlinks" href="#">Samsung</a></h4>
+                  <h4 class="panel-title"><a href="#">Samsung</a></h4>
                 </div>
               </div>
               <div class="panel panel-default activeTab">
                 <div class="panel-heading" id="ed">
-                  <h4 class="panel-title"><a class="edlinks" href="#">Game Stores</a></h4>
+                  <h4 class="panel-title"><a href="#">Game Stores</a></h4>
                 </div>
               </div>
               <div class="panel panel-default activeTab">
                 <div class="panel-heading"  id="ed">
-                  <h4 class="panel-title"><a class="edlinks" href="#">Hi-Fi Corp</a></h4>
+                  <h4 class="panel-title"><a href="#">Hi-Fi Corp</a></h4>
                 </div>
               </div>
             </div>
@@ -107,7 +107,7 @@ if (!$con)
 
 <div class="col-md-10">
           <div class="col-lg-12">
-            <h2 class="saleTag">special sale</h2>
+            <h2 class="title text-center">Products</h2>
           </div>
               <?php
  
@@ -132,7 +132,7 @@ if (!$con)
              echo '</div>';
              echo '</div>';
             }
-            
+            //echo '</table>';
         }
     ?>
 
@@ -140,22 +140,20 @@ if (!$con)
      </div>
    </div>
   </section>
-  <div class="container">
-      <div id="pagination">
+   <div id="pagination">
         <div id="pagiCount">
-        
             <?php
                 if(isset($pages))
                 {  
                     if($pages > 1)        
                     {    if($cur_page > $num_links)     // for taking to page 1 //
                         {   $dir = "first";
-                            echo '<span class="pagiCount" id="prev"> <a href="'.$_SERVER['PHP_SELF'].'?page='.(1).'">'.$dir.'</a> </span>';
+                            echo '<span id="prev"> <a href="'.$_SERVER['PHP_SELF'].'?page='.(1).'">'.$dir.'</a> </span>';
                         }
                        if($cur_page > 1) 
                         {
                             $dir = "prev";
-                            echo '<span class="pagiCount" id="prev"> <a href="'.$_SERVER['PHP_SELF'].'?page='.($cur_page-1).'">'.$dir.'</a> </span>';
+                            echo '<span id="prev"> <a href="'.$_SERVER['PHP_SELF'].'?page='.($cur_page-1).'">'.$dir.'</a> </span>';
                         }                 
                         
                         for($x=$start ; $x<=$end ;$x++)
@@ -165,7 +163,7 @@ if (!$con)
                         }
                         if($cur_page < $pages )
                         {   $dir = "next";
-                            echo '<span class="pagiCount" id="next"> <a href="'.$_SERVER['PHP_SELF'].'?page='.($cur_page+1).'">'.$dir.'</a> </span>';
+                            echo '<span id="next"> <a href="'.$_SERVER['PHP_SELF'].'?page='.($cur_page+1).'">'.$dir.'</a> </span>';
                         }
                         if($cur_page < ($pages-$num_links) )
                         {   $dir = "last";
@@ -176,9 +174,8 @@ if (!$con)
                 }
             ?>
         </div>
-      </div>
     </div>
-  <div id="footer">
+<div id="footer">
     <div class="container">
       <p class="text-muted">This site was designed and is maintained by <a href="https://www.linkedin.com/in/reggo-masiye-541162a0">Reggo</a> & <a href="https://www.linkedin.com/in/pethias-chiseke-b6a1738b">Pethias</a></p>
     </div>

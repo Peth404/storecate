@@ -1,5 +1,6 @@
 <?php
-  require_once 'php/action.php';
+ require_once 'php/dbcontroller.php';
+ require_once 'php/config.php';
   ?>
 <html>
 <head>
@@ -13,10 +14,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
 <body>
+ <section class="homeSection">
  
   <!-- NavBar Start -->
     <!-- <div class="container-fluid"> -->
-      <nav class="navbar navbar-default" role="navigation">
+    
+      <nav class="navbar navbar-default" id="home" role="navigation">
         <div class="container-fluid">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -26,7 +29,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Stores Cate</a>
+            <a class="navbar-brand" id="navLinks" href="#">Stores Cate</a>
           </div>
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <!-- <ul class="nav navbar-nav">
@@ -35,29 +38,31 @@
             <li><a href="#">SmartPhones</a></li>
             <li><a href="#">Computers</a></li>
             </ul> -->
-          <span class="pull-right">
+          <!-- <span class="pull-right" id="navLinks">
             (+260) 900 000 000 </br>
             <span><a href="#"><i class="fa fa-facebook "></i></a></span> <span id="twitter_icon"><a href="#"><i class="fa fa-twitter "></i></a></span> <span><a href="#"><i class="fa fa-google-plus"></i></a></span>
-          </span>
+          </span> -->
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
       </nav>
+    
     <!-- </div> -->
   <!-- NavBar End -->
 
    <!-- body section start -->
+  
    <h1 class="text-center">NAME OF STORE</h1>
 
-    <div class="container" id="slideShow">
+    <div class="container-fluid" id="slideShow">
       <div class="row">
-        <div class="col-md-2">
+        <div class="col-md-2 col-xs-4">
           <div class="left-sidebar">
             <h3>Stores</h3>
            
             <div class="panel-group category-products" id="accordian">
               <div class="panel panel-default activeTab">
                 <div class="panel-heading">
-                  <h4 class="panel-title"><a href="#">Edgars</a></h4>
+                  <h4 class="panel-title"><a href="edgars/edgars.php">Edgars</a></h4>
                 </div>
               </div>
               <div class="panel panel-default activeTab">
@@ -95,8 +100,8 @@
         </div>
        
        <!-- slide show starts  -->     
-        <div class="col-md-10" >
-          <h3 id="tagLine">Enjoy discounts from your favorite shops</h3>
+        <div class="col-md-10 col-xs-8" >
+          <h3 id="tagLine">Featured Items from Your Local Stores</h3>
          <div id="carousel-example-generic slideShow" class="carousel slide" data-ride="carousel">
           <!-- Indicators -->
             <ol class="carousel-indicators">
@@ -153,13 +158,15 @@
         <!-- slideshow ends -->
       </div>
   </div>
-  <div class="container" id="moreProducts" >
+
+  <div class="container-fluid" id="moreProducts" >
     <div class="col-md-12">
        <div class="col-lg-12">
           <h2 class="titleLine">More products on sale</h2>
         </div>
           <?php
-            $product_array = $db_handle->runQuery("SELECT * FROM sale");
+           require_once 'php/action.php';
+            $product_array = $db_handle->runQuery("SELECT * FROM sale limit 6");
               if (!empty($product_array)) { 
                 foreach($product_array as $key=>$value){
               ?>
@@ -180,6 +187,13 @@
     </div>
   </div>
 
+
+</section>
+<div id="footer">
+    <div class="container">
+      <p class="text-muted">This site was designed and is maintained by <a href="https://www.linkedin.com/in/reggo-masiye-541162a0">Reggo</a> & <a href="https://www.linkedin.com/in/pethias-chiseke-b6a1738b">Pethias</a></p>
+    </div>
+  </div>
 
 
 
