@@ -177,7 +177,8 @@ if (!$con)
     </div>
 <div id="footer">
     <div class="container">
-      <p class="text-muted">This site was designed and is maintained by <a href="https://www.linkedin.com/in/reggo-masiye-541162a0">Reggo</a> & <a href="https://www.linkedin.com/in/pethias-chiseke-b6a1738b">Pethias</a></p>
+    <span><span><small>Copyright 2016 by SalesOnli</small></span>
+      <span class="text-muted pull-right">This site was designed and is maintained by <a href="https://www.linkedin.com/in/reggo-masiye-541162a0">Reggo</a> & <a href="https://www.linkedin.com/in/pethias-chiseke-b6a1738b">Pethias</a></span></span>
     </div>
   </div>
 </body>

@@ -4,10 +4,11 @@
   ?>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Stores Cate</title>
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/storecate.js"></script>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -15,6 +16,55 @@
 </head>
 <body>
  <section class="homeSection">
+ <!-- <nav class="navbar navbar-inverse navbar-fixed-top" id="slide-nav" role="navigation">
+  <div class="container" id="">
+   <div class="navbar-header">
+    <a class="navbar-toggle"> 
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+     </a>
+    <a class="navbar-brand" id="navLinks" href="#">Storecate</a>
+   </div>
+   <div id="slidemenu">
+  
+     
+    <ul class="nav navbar-nav">
+     <li class="active"><a href="#">Home</a></li>
+     <li><a href="#about">About</a></li>
+     <li><a href="#contact">Contact</a></li>
+     <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+      <ul class="dropdown-menu">
+       <li><a href="#">Action</a></li>
+       <li><a href="#">Another action</a></li>
+       <li><a href="#">Something else here</a></li>
+       <li class="divider"></li>
+       <li class="dropdown-header">Nav header</li>
+       <li><a href="#">Separated link</a></li>
+       <li><a href="#">One more separated link</a></li>
+       <li><a href="#">Action</a></li>
+       <li><a href="#">Another action</a></li>
+       <li><a href="#">Something else here</a></li>
+       <li class="divider"></li>
+       <li class="dropdown-header">Nav header</li>
+       <li><a href="#">Separated link</a></li>
+       <li><a href="#">One more separated link</a></li>
+       <li><a href="#">Action</a></li>
+       <li><a href="#">Another action</a></li>
+       <li><a href="#">Something else here</a></li>
+       <li class="divider"></li>
+       <li class="dropdown-header">Nav header</li>
+       <li><a href="#">Separated link test long title goes here</a></li>
+       <li><a href="#">One more separated link</a></li>
+      </ul>
+     </li>
+    </ul>
+       <span class="pull-right"><img class="logo" src="logo.png">
+          </span>    
+   </div>
+  </div>
+ </nav> -->
  
   <!-- NavBar Start -->
     <!-- <div class="container-fluid"> -->
@@ -37,60 +87,72 @@
             <li><a href="#">Shops</a></li>
             <li><a href="#">SmartPhones</a></li>
             <li><a href="#">Computers</a></li>
-            </ul> -->
+            </ul>
           <!-- <span class="pull-right" id="navLinks">
             (+260) 900 000 000 </br>
             <span><a href="#"><i class="fa fa-facebook "></i></a></span> <span id="twitter_icon"><a href="#"><i class="fa fa-twitter "></i></a></span> <span><a href="#"><i class="fa fa-google-plus"></i></a></span>
           </span> -->
-          </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-      </nav>
+          </div> <!-- .navbar-collapse -->
+        </div><!-- .container-fluid -->
+      </nav> 
     
-    <!-- </div> -->
-  <!-- NavBar End -->
+    </div>
+  <!-- NavBar End
 
    <!-- body section start -->
   
-   <h1 class="text-center">NAME OF STORE</h1>
+   <h1 class="siteName">NAME OF STORE</h1>
+   <!-- tabs show on small screen -->
+   <div class="container visible-xs">
+   
 
-    <div class="container-fluid" id="slideShow">
+       <h3>Stores</h3>
+
+        <a href="edgars/edgars.php"><button type="button" class="btn btn-default activeTab">Edgars</button></a>
+        <a href="jet/jet.php"><button type="button" class="btn btn-default activeTab">Jet</button></a>
+        <a href="#"><button type="button" class="btn btn-default activeTab">Pep</button></a>
+        <a href="#"><button type="button" class="btn btn-default activeTab">Indentity</button></a>
+      
+    </div>
+
+    <div class="container-fluid hidden-xs" id="slideShow">
       <div class="row">
         <div class="col-md-2 col-xs-4">
           <div class="left-sidebar">
             <h3>Stores</h3>
            
             <div class="panel-group category-products" id="accordian">
-              <div class="panel panel-default activeTab">
+              <div class="panel panel-default activeTab sideTab">
                 <div class="panel-heading">
                   <h4 class="panel-title"><a href="edgars/edgars.php">Edgars</a></h4>
                 </div>
               </div>
-              <div class="panel panel-default activeTab">
+              <div class="panel panel-default activeTab sideTab">
                 <div class="panel-heading">
                   <h4 class="panel-title"><a href="#">Jet</a></h4>
                 </div>
               </div>
-              <div class="panel panel-default activeTab">
+              <div class="panel panel-default activeTab sideTab">
                 <div class="panel-heading">
                   <h4 class="panel-title"><a href="#">Pep</a></h4>
                 </div>
               </div>
-              <div class="panel panel-default activeTab">
+              <div class="panel panel-default activeTab sideTab">
                 <div class="panel-heading">
                   <h4 class="panel-title"><a href="#">Identity</a></h4>
                 </div>
               </div>
-              <div class="panel panel-default activeTab">
+              <div class="panel panel-default activeTab sideTab">
                 <div class="panel-heading">
                   <h4 class="panel-title"><a href="#">Samsung</a></h4>
                 </div>
               </div>
-              <div class="panel panel-default activeTab">
+              <div class="panel panel-default activeTab sideTab">
                 <div class="panel-heading">
                   <h4 class="panel-title"><a href="#">Game Stores</a></h4>
                 </div>
               </div>
-              <div class="panel panel-default activeTab">
+              <div class="panel panel-default activeTab sideTab">
                 <div class="panel-heading">
                   <h4 class="panel-title"><a href="#">Hi-Fi Corp</a></h4>
                 </div>
@@ -166,7 +228,7 @@
         </div>
           <?php
            require_once 'php/action.php';
-            $product_array = $db_handle->runQuery("SELECT * FROM sale limit 6");
+            $product_array = $db_handle->runQuery("SELECT * FROM edgars limit 6");
               if (!empty($product_array)) { 
                 foreach($product_array as $key=>$value){
               ?>
@@ -191,16 +253,15 @@
 </section>
 <div id="footer">
     <div class="container">
-      <p class="text-muted">This site was designed and is maintained by <a href="https://www.linkedin.com/in/reggo-masiye-541162a0">Reggo</a> & <a href="https://www.linkedin.com/in/pethias-chiseke-b6a1738b">Pethias</a></p>
+    <span><span><small>Copyright 2016 by SalesOnli</small></span>
+      <span class="text-muted pull-right">This site was designed and is maintained by <a href="https://www.linkedin.com/in/reggo-masiye-541162a0">Reggo</a> & <a href="https://www.linkedin.com/in/pethias-chiseke-b6a1738b">Pethias</a></span></span>
     </div>
   </div>
 
 
 
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->   
-    <script src="js/jquery-1.9.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/storecate.js"></script>
+   
 
 </BODY>
 </HTML>

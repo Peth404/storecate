@@ -1,12 +1,18 @@
 <?php
 
+$id=$_REQUEST['id'];
 $name=$_REQUEST['name'];
-$costprice=$_REQUEST['costprice'];
+$price=$_REQUEST['price'];
 $discount=$_REQUEST['discount'];
-$image= $_REQUEST['image'];
+// $discountprice = $_REQUEST['discountprice'];
+$duration=$_REQUEST['duration'];
+$ds=$_REQUEST['ds'];
+$de=$_REQUEST['de'];
+$image=$_REQUEST['image'];
 
 
-$cost = $costprice;
+
+$cost = $price;
 $disc = $discount;
 
 

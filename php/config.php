@@ -5,6 +5,6 @@ if (!$con)
   die('Could not connect: ' . mysql_error());
   }
   // select database
-  mysql_select_db("stores", $con); //
+  mysql_select_db("salesonli", $con); //
 
   ?>

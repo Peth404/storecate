@@ -16,7 +16,7 @@ if (!$con)
   //   count total number of rows from the desired table in the database  //
 //step:2
     
-  $query = mysql_query("SELECT * FROM sale"); //Counting total number of rows in the table 'data',
+  $query = mysql_query("SELECT * FROM edgars"); //Counting total number of rows in the table 'data',
   $total_rows = mysql_num_rows($query);
 
   // setup configuration//  
@@ -51,7 +51,7 @@ if (!$con)
 
     //query the database with calculated OFFSET //
 //step:7
-    $res = mysql_query("SELECT * FROM sale LIMIT ".$per_page." OFFSET ".$offset);
+    $res = mysql_query("SELECT * FROM edgars LIMIT ".$per_page." OFFSET ".$offset);
 
  mysql_close($con);
  
