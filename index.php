@@ -5,7 +5,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Stores Cate</title>
+    <title>SalesOnli</title>
     <script src="js/jquery-1.9.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/storecate.js"></script>
@@ -16,59 +16,7 @@
 </head>
 <body>
  <section class="homeSection">
- <!-- <nav class="navbar navbar-inverse navbar-fixed-top" id="slide-nav" role="navigation">
-  <div class="container" id="">
-   <div class="navbar-header">
-    <a class="navbar-toggle"> 
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-     </a>
-    <a class="navbar-brand" id="navLinks" href="#">Storecate</a>
-   </div>
-   <div id="slidemenu">
-  
-     
-    <ul class="nav navbar-nav">
-     <li class="active"><a href="#">Home</a></li>
-     <li><a href="#about">About</a></li>
-     <li><a href="#contact">Contact</a></li>
-     <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-      <ul class="dropdown-menu">
-       <li><a href="#">Action</a></li>
-       <li><a href="#">Another action</a></li>
-       <li><a href="#">Something else here</a></li>
-       <li class="divider"></li>
-       <li class="dropdown-header">Nav header</li>
-       <li><a href="#">Separated link</a></li>
-       <li><a href="#">One more separated link</a></li>
-       <li><a href="#">Action</a></li>
-       <li><a href="#">Another action</a></li>
-       <li><a href="#">Something else here</a></li>
-       <li class="divider"></li>
-       <li class="dropdown-header">Nav header</li>
-       <li><a href="#">Separated link</a></li>
-       <li><a href="#">One more separated link</a></li>
-       <li><a href="#">Action</a></li>
-       <li><a href="#">Another action</a></li>
-       <li><a href="#">Something else here</a></li>
-       <li class="divider"></li>
-       <li class="dropdown-header">Nav header</li>
-       <li><a href="#">Separated link test long title goes here</a></li>
-       <li><a href="#">One more separated link</a></li>
-      </ul>
-     </li>
-    </ul>
-       <span class="pull-right"><img class="logo" src="logo.png">
-          </span>    
-   </div>
-  </div>
- </nav> -->
- 
   <!-- NavBar Start -->
-    <!-- <div class="container-fluid"> -->
-    
       <nav class="navbar navbar-default" id="home" role="navigation">
         <div class="container-fluid">
           <div class="navbar-header">
@@ -79,7 +27,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" id="navLinks" href="#">Stores Cate</a>
+            <span class="navbar-brand" id="navLinks">SalesOnli</span>
           </div>
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <!-- <ul class="nav navbar-nav">
@@ -238,7 +186,7 @@
                 <!-- <img class="style_prevu_kit" src="../images/products/htc-A9.png"> -->
                   <p class ="productName"><?php echo $product_array[$key]["name"]; ?></p>
                     <span class="discount"><?php echo $product_array[$key]["discount"]. "%" . " off"; ?></span>
-                    <p class="costpriceWas"> Was: K <?php echo number_format($product_array[$key]["costprice"], 2, ".",""); ?> <span class="pull-right costpriceNow "> Now: K <?php echo number_format($product_array[$key]["discountprice"], 2,".",""); ?></span></p>
+                    <p class="costpriceWas"> Was: K <?php echo number_format($product_array[$key]["price"], 2, ".",""); ?> <span class="pull-right costpriceNow "> Now: K <?php echo number_format($product_array[$key]["discountprice"], 2,".",""); ?></span></p>
                     <p class="promoRun">Promo from: <?php echo $product_array[$key]["ds"]; ?> - <?php echo $product_array[$key]["de"]; ?> </p>
             </div>
           </div>
@@ -251,7 +199,7 @@
 
 
 </section>
-<div id="footer">
+<div class="navbar-fixed-bottom" id="footer">
     <div class="container">
     <span><span><small>Copyright 2016 by SalesOnli</small></span>
       <span class="text-muted pull-right">This site was designed and is maintained by <a href="https://www.linkedin.com/in/reggo-masiye-541162a0">Reggo</a> & <a href="https://www.linkedin.com/in/pethias-chiseke-b6a1738b">Pethias</a></span></span>

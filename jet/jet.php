@@ -1,15 +1,5 @@
 <?php
-include 'php/config.php';
-
-/*$con = mysql_connect("localhost","root"," "); // Enter hostname,user,password 
-if (!$con)
-  {
-  die('Could not connect: ' . mysql_error());
-  }
-  // select database
-  mysql_select_db("stores", $con); //*/
-
-
+  include 'php/config.php';
   include("../php/pagination.php");
   ?>
 <html>
@@ -17,7 +7,9 @@ if (!$con)
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Stores Cate Jet</title>
+    <title>SalesOnli-Jet</title>
+    <script src="../js/jquery-1.9.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="jet.css">
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
@@ -56,45 +48,53 @@ if (!$con)
     <!-- </div> -->
   <!-- NavBar End -->
   <!-- body section start -->
+  <!-- tabs show on small screen -->
+   <div class=" mobileMenu container visible-xs">
+      <h2>Stores</h2>
+        <a href="../edgars/edgars.php"><button type="button" class="btn btn-default activeTab">Edgars</button></a>
+        <a href="jet.php"><button type="button" class="btn btn-default activeTab">Jet</button></a>
+        <a href="#"><button type="button" class="btn btn-default activeTab">Pep</button></a>
+        <a href="#"><button type="button" class="btn btn-default activeTab">Indentity</button></a>
+    </div>
   <section class="jetContent">
-    <div class="container-fluid">
+    <div class="container-fluid ">
       <div class="row">
-        <div class="col-md-2">
+        <div class="col-md-2 hidden-xs">
           <div class="left-sidebar">
             <h2>Stores</h2>
             <div class="panel-group category-products" id="accordian">
              
-              <div class="panel panel-default activeTab">
+              <div class="panel panel-default activeTab sideTab">
                 <div class="panel-heading"  id="ed">
-                  <h4 class="panel-title active"><a href="#">Edgers</a></h4>
+                  <h4 class="panel-title active"><a href="../edgars/edgars.php">Edgers</a></h4>
                 </div>
               </div>
-              <div class="panel panel-default activeTab">
+              <div class="panel panel-default activeTab sideTab">
                 <div class="panel-heading"  id="ed">
-                  <h4 class="panel-title"><a href="#">Jet</a></h4>
+                  <h4 class="panel-title"><a href="jet.php">Jet</a></h4>
                 </div>
               </div>
-              <div class="panel panel-default activeTab">
+              <div class="panel panel-default activeTab sideTab">
                 <div class="panel-heading"  id="ed">
                   <h4 class="panel-title"><a href="#">Pep</a></h4>
                 </div>
               </div>
-              <div class="panel panel-default activeTab">
+              <div class="panel panel-default activeTab sideTab">
                 <div class="panel-heading"  id="ed">
                   <h4 class="panel-title"><a href="#">Identity</a></h4>
                 </div>
               </div>
-              <div class="panel panel-default activeTab">
+              <div class="panel panel-default activeTab sideTab">
                 <div class="panel-heading"  id="ed">
                   <h4 class="panel-title"><a href="#">Samsung</a></h4>
                 </div>
               </div>
-              <div class="panel panel-default activeTab">
+              <div class="panel panel-default activeTab sideTab">
                 <div class="panel-heading" id="ed">
                   <h4 class="panel-title"><a href="#">Game Stores</a></h4>
                 </div>
               </div>
-              <div class="panel panel-default activeTab">
+              <div class="panel panel-default activeTab sideTab">
                 <div class="panel-heading"  id="ed">
                   <h4 class="panel-title"><a href="#">Hi-Fi Corp</a></h4>
                 </div>
@@ -102,8 +102,6 @@ if (!$con)
             </div>
           </div>
         </div>
-
-<!-- <link href='http://fonts.googleapis.com/css?family=Roboto:100,400,300,500,700' rel='stylesheet' type='text/css'> -->
 
 <div class="col-md-10">
           <div class="col-lg-12">

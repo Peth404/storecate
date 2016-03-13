@@ -5,9 +5,11 @@ body{
     background: #F67C18;
 }
 #jlogo{
-    width: 130px;
-    height: 76px;
-    margin-left: 50px;
+    width: 85px;
+    height: 61px;
+    margin-left: 58px;
+    padding-bottom: 25px;
+    margin-top: -6px;
 }
 #jetthumbProduct{
     background-color: #000;

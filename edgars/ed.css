@@ -12,9 +12,11 @@
   height: 280px;
 }
 
-a.edlinks{
+.edlinks{
     font-family: arial;
     font-weight: 200;
+    text-decoration: none;
+    text-decoration-style: none;
     
     }
 
