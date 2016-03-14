@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Salesonli Admin</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="assets/css/form-elements.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!-- Favicon and touch icons -->
+        <link rel="shortcut icon" href="assets/ico/favicon.png">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+    </head>
+
+    <body>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                    <a class="navbar-brand" href="#">SalesOnli</a>
+            </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+            <li><a href="../index.php">home</a></li>
+            <li><a href="../edgars/edgars.php">edgars</a></li>
+            <li><a href="../jet/jet.php">jet</a></li>
+            <li><a href="../pep/pep.php">pep</a></li>
+            </ul>
+            <!-- <span class="pull-right">
+            (+260) 900 000 000 </br>
+            <span><a href="#"><i class="fa fa-facebook "></i></a></span> <span id="twitter_icon"><a href="#"><i class="fa fa-twitter "></i></a></span> <span><a href="#"><i class="fa fa-google-plus"></i></a></span>
+          </span> -->
+            </div>
+        </div>
+    </nav> 
+
+       <!--  Content -->
+        <div class="top-content">
+        	
+            <div class="inner-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2 text">
+                        	
+                            <h1><strong>SalesOnli</strong> Admin</h1>
+                            <div class="description">
+                            	<p>
+	                            	Select a store
+                            	</p>
+                            </div>
+                            <div class="top-big-link">
+                                <a class="launch-modal" href="#" data-modal-id="modal-register-edgars"><img src="img/elogo.png"></a>
+                            <!-- </div>
+                            <!-- <div class="top-big-link"> -->
+                                <a class="launch-modal" href="#" data-modal-id="modal-register-jet"><img src="img/jet.png"></a>
+                            <!-- </div> -->
+                            <!-- <div class="top-big-link"> -->
+                            	<a class="launch-modal" href="#" data-modal-id="modal-register-pep"><img src="img/pep.png"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        <!-- MODAL edgars-->
+        <div class="modal fade" id="modal-register-edgars" tabindex="-1" role="dialog" aria-labelledby="modal-register-label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                        </button>
+                        <h3 class="modal-title" id="modal-register-label">Item entry in edgars</h3>
+                        <p>Enter the details of the item below:</p>
+                    </div>
+                    
+                    <div class="modal-body">
+                        
+                        <form role="form" action="insert-ed.php" method="post" class="registration-form">
+                            <div class="form-group">
+                                <label class="sr-only" for="form-first-name">ID</label>
+                                <input type="int" name="id" placeholder="ID" class="form-first-name form-control" id="form-first-name">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="form-last-name">Name</label>
+                                <input type="text" name="name" placeholder="Name" class="form-last-name form-control" id="form-last-name">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="form-last-name">Price</label>
+                                <input type="decimal" name="price" placeholder="Price" class="form-last-name form-control" id="form-last-name">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="form-last-name">Discount</label>
+                                <input type="int" name="discount" placeholder="Discount" class="form-last-name form-control" id="form-last-name">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="form-last-name">Duration</label>
+                                <input type="int" name="duration" placeholder="Duration" class="form-last-name form-control" id="form-last-name">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="form-last-name">Start Date</label>
+                                <input type="date" name="ds" placeholder="Start Date" class="form-last-name form-control" id="form-last-name">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="form-last-name">End Date</label>
+                                <input type="date" name="de" placeholder="End Date" class="form-last-name form-control" id="form-last-name">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="form-last-name">Image</label>
+                                <input type="text" name="image" placeholder="Image" class="form-last-name form-control" id="form-last-name">
+                            </div>
+                            
+                            <button class="btn" type="submit" value ="Add item">Add item</button>
+                        </form>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+<!-- MODAL jet-->
+        <div class="modal fade" id="modal-register-jet" tabindex="-1" role="dialog" aria-labelledby="modal-register-label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                        </button>
+                        <h3 class="modal-title" id="modal-register-label">Item entry in jet</h3>
+                        <p>Enter the details of the item below:</p>
+                    </div>
+                    
+                    <div class="modal-body">
+                        
+                        <form role="form" action="" method="post" class="registration-form">
+                            <div class="form-group">
+                                <label class="sr-only" for="form-first-name">ID</label>
+                                <input type="int" name="id" placeholder="ID" class="form-first-name form-control" id="form-first-name">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="form-last-name">Name</label>
+                                <input type="text" name="name" placeholder="Name" class="form-last-name form-control" id="form-last-name">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="form-last-name">Price</label>
+                                <input type="decimal" name="price" placeholder="Price" class="form-last-name form-control" id="form-last-name">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="form-last-name">Discount</label>
+                                <input type="int" name="discount" placeholder="Discount" class="form-last-name form-control" id="form-last-name">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="form-last-name">Duration</label>
+                                <input type="int" name="duration" placeholder="Duration" class="form-last-name form-control" id="form-last-name">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="form-last-name">Start Date</label>
+                                <input type="date" name="ds" placeholder="Start Date" class="form-last-name form-control" id="form-last-name">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="form-last-name">End Date</label>
+                                <input type="date" name="de" placeholder="End Date" class="form-last-name form-control" id="form-last-name">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="form-last-name">Image</label>
+                                <input type="text" name="image" placeholder="Image" class="form-last-name form-control" id="form-last-name">
+                            </div>
+                            <!-- <div class="form-group">
+                                <label class="sr-only" for="form-email">Email</label>
+                                <input type="text" name="form-email" placeholder="Email..." class="form-email form-control" id="form-email">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="form-about-yourself">About yourself</label>
+                                <textarea name="form-about-yourself" placeholder="About yourself..." 
+                                            class="form-about-yourself form-control" id="form-about-yourself"></textarea>
+                            </div> -->
+                            <button type="submit" value ="insert" class="btn">Add item</button>
+                        </form>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+<!-- MODAL pep-->
+        <div class="modal fade" id="modal-register-pep" tabindex="-1" role="dialog" aria-labelledby="modal-register-label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                        </button>
+                        <h3 class="modal-title" id="modal-register-label">Item entry in Pep</h3>
+                        <p>Enter the details of the item below:</p>
+                    </div>
+                    
+                    <div class="modal-body">
+                        
+                        <form role="form" action="" method="post" class="registration-form">
+                            <div class="form-group">
+                                <label class="sr-only" for="form-first-name">ID</label>
+                                <input type="int" name="id" placeholder="ID" class="form-first-name form-control" id="form-first-name">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="form-last-name">Name</label>
+                                <input type="text" name="name" placeholder="Name" class="form-last-name form-control" id="form-last-name">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="form-last-name">Price</label>
+                                <input type="decimal" name="price" placeholder="Price" class="form-last-name form-control" id="form-last-name">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="form-last-name">Discount</label>
+                                <input type="int" name="discount" placeholder="Discount" class="form-last-name form-control" id="form-last-name">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="form-last-name">Duration</label>
+                                <input type="int" name="duration" placeholder="Duration" class="form-last-name form-control" id="form-last-name">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="form-last-name">Start Date</label>
+                                <input type="date" name="ds" placeholder="Start Date" class="form-last-name form-control" id="form-last-name">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="form-last-name">End Date</label>
+                                <input type="date" name="de" placeholder="End Date" class="form-last-name form-control" id="form-last-name">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="form-last-name">Image</label>
+                                <input type="text" name="image" placeholder="Image" class="form-last-name form-control" id="form-last-name">
+                            </div>
+                            <!-- <div class="form-group">
+                                <label class="sr-only" for="form-email">Email</label>
+                                <input type="text" name="form-email" placeholder="Email..." class="form-email form-control" id="form-email">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="form-about-yourself">About yourself</label>
+                                <textarea name="form-about-yourself" placeholder="About yourself..." 
+                                            class="form-about-yourself form-control" id="form-about-yourself"></textarea>
+                            </div> -->
+                            <button type="submit" value ="insert" class="btn">Add item</button>
+                        </form>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    <div class="navbar-fixed-bottom" id="footer">
+        <div class="container">
+            <span><span><small>Copyright 2016 by SalesOnli</small></span>
+            <span class="text-muted pull-right">This site was designed and is maintained by <a href="https://www.linkedin.com/in/reggo-masiye-541162a0">Reggo</a> & <a href="https://www.linkedin.com/in/pethias-chiseke-b6a1738b">Pethias</a></span></span>
+        </div>
+    </div>
+
+        
+
+
+        <!-- Javascript -->
+        <script src="assets/js/jquery-1.11.1.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/js/jquery.backstretch.min.js"></script>
+        <script src="assets/js/scripts.js"></script>
+        
+        <!--[if lt IE 10]>
+            <script src="assets/js/placeholder.js"></script>
+        <![endif]-->
+
+    </body>
+
+</html>
